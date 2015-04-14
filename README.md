@@ -13,3 +13,8 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
     Precision.ConfigureModelBuilder(modelBuilder);
 }
 ```
+3. Apply the annotation to your decimal properties in your code first models
+```
+[Precision(18,4)]
+public decimal quantity { get; set; }
+```
